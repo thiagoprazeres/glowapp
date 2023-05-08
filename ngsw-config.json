@@ -10,6 +10,7 @@
           "/favicon.ico",
           "/index.html",
           "/manifest.webmanifest",
+          "src/_redirects",
           "/*.css",
           "/*.js"
         ]
