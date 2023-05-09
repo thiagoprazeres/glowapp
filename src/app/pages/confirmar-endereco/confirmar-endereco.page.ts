@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,12 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./confirmar-endereco.page.scss'],
 })
 export class ConfirmarEnderecoPage implements OnInit {
-  endereco: string | null | undefined;
+  safeUrl: SafeResourceUrl | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
-    this.endereco = this.route.snapshot.paramMap.get('endereco');
+    const endereco = this.route.snapshot.paramMap.get('endereco');
+    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.google.com/maps/embed/v1/place?key=AIzaSyD9X5Je9vYPqgyLV8hWs67NQdXhqbHfZEM&q=' + endereco + ', Recife-PE');
   }
-  
+
 }

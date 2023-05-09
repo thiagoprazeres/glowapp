@@ -12,48 +12,12 @@
       <h1>Brilhe por dentro e por fora</h1>
     </ion-text>
   </div>
-
   <ion-list>
-    <ion-item routerLink="/servico/Skin Care">
+    <ion-item *ngFor="let servico of servicos" [routerLink]="'/servico/' + servico.nome">
       <ion-thumbnail slot="start">
-        <img alt="Skin Care" src="../../assets/photos/pexels-andrea-piacquadio-3764013.jpg" />
+        <img [alt]="servico.nome" [src]="servico.imagem" />
       </ion-thumbnail>
-      <ion-label>Skin Care</ion-label>
-    </ion-item>
-
-    <ion-item routerLink="/servico/Drenagem e Massoterapia">
-      <ion-thumbnail slot="start">
-        <img alt="Drenagem e Massoterapia" src="../../assets/photos/pexels-cottonbro-studio-3997980.jpg" />
-      </ion-thumbnail>
-      <ion-label>Drenagem e Massoterapia</ion-label>
-    </ion-item>
-
-    <ion-item routerLink="/servico/Terapias alternativas">
-      <ion-thumbnail slot="start">
-        <img alt="Terapias alternativas" src="../../assets/photos/pexels-alma-thai-4353249.jpg" />
-      </ion-thumbnail>
-      <ion-label>Terapias alternativas</ion-label>
-    </ion-item>
-
-    <ion-item routerLink="/servico/Hair">
-      <ion-thumbnail slot="start">
-        <img alt="Hair" src="../../assets/photos/pexels-element-digital-973403.jpg" />
-      </ion-thumbnail>
-      <ion-label>Hair</ion-label>
-    </ion-item>
-
-    <ion-item routerLink="/servico/Barber Shop">
-      <ion-thumbnail slot="start">
-        <img alt="Barber Shop" src="../../assets/photos/pexels-nikolaos-dimou-1319461.jpg" />
-      </ion-thumbnail>
-      <ion-label>Barber Shop</ion-label>
-    </ion-item>
-
-    <ion-item routerLink="/servico/Depil'" lines="non">
-      <ion-thumbnail slot="start">
-        <img alt="Depil" src="../../assets/photos/pexels-tima-miroshnichenko-6763618.jpg" />
-      </ion-thumbnail>
-      <ion-label>Depil</ion-label>
+      <ion-label>{{servico.nome}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
