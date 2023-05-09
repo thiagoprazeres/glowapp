@@ -11,18 +11,18 @@ const agora = moment().tz('America/Recife').format();
 export class AgendarPage implements OnInit {
 
   agendamentoForm = this.formBuilder.group({
-    data: '',
-    hora: ''
+    data: "2023-05-09",
+    hora: "03:30"
   });
 
   constructor(private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
-    this.agendamentoForm = this.formBuilder.group({
-      data: agora,
-      hora: agora
-    });
+    // this.agendamentoForm = this.formBuilder.group({
+    //   data: agora,
+    //   hora: agora
+    // });
   }
 
   confirmar() {
