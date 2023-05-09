@@ -1,13 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>{{titulo}}</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{titulo}}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-img src="../../../assets/photos/pexels-andrea-piacquadio-3764013.jpg" alt=""></ion-img>
+  <div class="ion-padding">
+    <h1>{{titulo}}</h1>
+    <h2>R$ 150,00</h2>
+    <ion-icon name="star" color="warning"></ion-icon> 4.9 <ion-text color="medium"><small>(286
+        avaliações)</small></ion-text>
+    <ion-text>
+      <p>É um tratamento que tem como objetivo cuidar da pele do rosto e do corpo, com o objetivo
+        de melhorar a aparência e saúde da pele. O tratamento é realizado por profissionais da área de estética e pode
+        incluir uma variedade de técnicas e procedimentos personalizados, como limpeza de pele, esfoliação, hidratação,
+        massagem facial e aplicação de máscaras. O serviço de skin care pode ser realizado como um tratamento pontual
+        para ocasiões especiais ou regularmente como parte de uma rotina de cuidados com a pele. O objetivo é promover
+        uma aparência mais jovem, radiante e saudável da pele.</p>
+    </ion-text>
+  </div>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" routerLink="/endereco">Agendar</ion-button>
+  </ion-toolbar>
+</ion-footer>

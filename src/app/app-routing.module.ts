@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'servico/:titulo',
     loadChildren: () => import('./pages/servico/servico.module').then( m => m.ServicoPageModule)
   },
+  {
+    path: 'endereco',
+    loadChildren: () => import('./pages/endereco/endereco.module').then( m => m.EnderecoPageModule)
+  },
 ];
 
 @NgModule({
