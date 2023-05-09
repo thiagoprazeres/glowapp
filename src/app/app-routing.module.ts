@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'confirmar-endereco/:endereco',
     loadChildren: () => import('./pages/confirmar-endereco/confirmar-endereco.module').then( m => m.ConfirmarEnderecoPageModule)
   },
+  {
+    path: 'agendar',
+    loadChildren: () => import('./pages/agendar/agendar.module').then( m => m.AgendarPageModule)
+  },
 ];
 
 @NgModule({
