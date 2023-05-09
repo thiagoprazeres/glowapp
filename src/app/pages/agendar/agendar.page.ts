@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import * as moment from 'moment-timezone';
+const agora = moment().tz('America/Recife').format();
 
 @Component({
   selector: 'app-agendar',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendarPage implements OnInit {
 
-  constructor() { }
+  agendamentoForm = this.formBuilder.group({
+    data: '',
+    hora: ''
+  });
+
+  constructor(private formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
+    this.agendamentoForm = this.formBuilder.group({
+      data: agora,
+      hora: agora
+    });
+  }
+
+  confirmar() {
+    console.log(this.agendamentoForm.value);
   }
 
 }
