@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'endereco',
     loadChildren: () => import('./pages/endereco/endereco.module').then( m => m.EnderecoPageModule)
   },
+  {
+    path: 'confirmar-endereco/:endereco',
+    loadChildren: () => import('./pages/confirmar-endereco/confirmar-endereco.module').then( m => m.ConfirmarEnderecoPageModule)
+  },
 ];
 
 @NgModule({
