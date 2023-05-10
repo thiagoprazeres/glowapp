@@ -1,22 +1,18 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      GlowApp
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content>
   <div class="ion-padding">
-    <ion-text color="primary">
-      <h1>Brilhe por dentro e por fora</h1>
+    <img src="../../assets/logo-horizontal.svg" alt="GlowApp" width="66%" style="max-width: 480px;margin-top: 16px">
+    <ion-text color="secondary">
+      <h1 style="font-family: 'Suarez Alt';">Brilhe por dentro e por fora</h1>
     </ion-text>
   </div>
   <ion-list>
+    <ion-list-header>
+      <ion-label>Serviços wellness beauty delivery</ion-label>
+    </ion-list-header>
     <ion-item *ngFor="let servico of servicos" [routerLink]="'/servico/' + servico.nome">
-      <ion-thumbnail slot="start">
+      <ion-avatar slot="start">
         <img [alt]="servico.nome" [src]="servico.imagem" />
-      </ion-thumbnail>
+      </ion-avatar>
       <ion-label>{{servico.nome}}</ion-label>
     </ion-item>
   </ion-list>
