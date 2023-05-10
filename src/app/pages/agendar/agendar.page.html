@@ -13,15 +13,15 @@
       <ion-item>
         <ion-label>Selecione a data desejada</ion-label>
       </ion-item>
-      <ion-item>
+      <ion-item class="ion-no-padding">
         <ion-datetime formControlName="data" presentation="date" locale="pt-BR" [isDateEnabled]="isSunday"
-          [min]="agora" required></ion-datetime>
+          [min]="agora" size="cover" color="rose" required></ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label>Selecione o horário desejado</ion-label>
       </ion-item>
-      <ion-item>
-        <ion-datetime formControlName="hora" presentation="time" minuteValues="0,15,30,45" size="cover"
+      <ion-item class="ion-no-padding">
+        <ion-datetime formControlName="hora" color="rose" presentation="time" minuteValues="0,15,30,45" size="cover"
           required></ion-datetime>
       </ion-item>
     </ion-list>
