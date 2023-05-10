@@ -8,24 +8,24 @@
 </ion-header>
 
 <ion-content>
-  <ng-container>
-    <form [formGroup]="agendamentoForm">
-      <ion-list>
-        <ion-item>
-          <ion-label>Selecione a data desejada</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-datetime formControlName="data" presentation="date" locale="pt-BR" [isDateEnabled]="isSunday" min="2023-05-09T00:00:00" required></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label>Selecione o horário desejado</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-datetime formControlName="hora" presentation="time" minuteValues="0,30" required></ion-datetime>
-        </ion-item>
-      </ion-list>
-    </form>
-  </ng-container>
+  <form [formGroup]="agendamentoForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Selecione a data desejada</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-datetime formControlName="data" presentation="date" locale="pt-BR" [isDateEnabled]="isSunday"
+          [min]="agora" required></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Selecione o horário desejado</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-datetime formControlName="hora" presentation="time" minuteValues="0,15,30,45" size="cover"
+          required></ion-datetime>
+      </ion-item>
+    </ion-list>
+  </form>
 </ion-content>
 <ion-footer class="ion-no-padding">
   <ion-toolbar color="primary">

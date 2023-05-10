@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import * as moment from 'moment-timezone';
-const agora = moment().tz('America/Recife').format();
 
 @Component({
   selector: 'app-agendar',
@@ -9,6 +8,7 @@ const agora = moment().tz('America/Recife').format();
   styleUrls: ['./agendar.page.scss'],
 })
 export class AgendarPage implements OnInit {
+  agora = moment().tz('America/Recife').format();
 
   agendamentoForm = this.formBuilder.group({
     data: "",
@@ -20,8 +20,8 @@ export class AgendarPage implements OnInit {
 
   ngOnInit() {
     this.agendamentoForm = this.formBuilder.group({
-      data: agora,
-      hora: agora
+      data: this.agora,
+      hora: this.agora
     });
   }
 
