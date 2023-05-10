@@ -11,22 +11,32 @@ const agora = moment().tz('America/Recife').format();
 export class AgendarPage implements OnInit {
 
   agendamentoForm = this.formBuilder.group({
-    data: "2023-05-09",
-    hora: "03:30"
+    data: "",
+    hora: ""
   });
 
   constructor(private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
-    // this.agendamentoForm = this.formBuilder.group({
-    //   data: agora,
-    //   hora: agora
-    // });
+    this.agendamentoForm = this.formBuilder.group({
+      data: agora,
+      hora: agora
+    });
   }
 
   confirmar() {
     console.log(this.agendamentoForm.value);
   }
+  isSunday = (dateString: string) => {
+    const date = new Date(dateString);
+    const utcDay = date.getUTCDay();
+
+    /**
+     * Date will be enabled if it is not
+     * Sunday or Saturday
+     */
+    return utcDay !== 0;
+  };
 
 }
