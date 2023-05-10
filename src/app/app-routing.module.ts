@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'pagamento',
     loadChildren: () => import('./pages/pagamento/pagamento.module').then( m => m.PagamentoPageModule)
   },
+  {
+    path: 'sucesso',
+    loadChildren: () => import('./pages/sucesso/sucesso.module').then( m => m.SucessoPageModule)
+  },
 ];
 
 @NgModule({

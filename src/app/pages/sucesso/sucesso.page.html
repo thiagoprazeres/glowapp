@@ -1,0 +1,51 @@
+<ion-content>
+  <div class="ion-padding">
+    <ion-text>
+      <ng-lottie [options]="options" height="226px"></ng-lottie>
+      <h1 style="font-family: Suarez Alt;margin-top: -32px;">Parabéns! Seu pagamento foi realizado com sucesso</h1>
+      <p>Agradecemos por escolher nossa plataforma para agendar seus serviços de embelezamento e bem-estar.</p>
+      <p>Agora você pode desfrutar dos seus serviços com tranquilidade e segurança. Seu agendamento já foi confirmado e
+        em breve você será atendido pelo profissional escolhido.</p>
+    </ion-text>
+  </div>
+  <ion-list style="margin-top: -32px;">
+    <ion-list-header>
+      <ion-label>Seu agendamento já foi confirmado</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-label>
+        <p>Serviço</p>
+        <h2>Nail</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="calendar" slot="start"></ion-icon>
+      <ion-label>
+        <p>Data e hora marcada</p>
+        <h2>10 de maio de 2023 às 15 horas</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>
+        <p>Endereço de atendimento</p>
+        <h2>Avenida Norte Miguel Arraes de Alencar, 2251 - Rosarinho</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="card" slot="start"></ion-icon>
+      <ion-label>
+        <p>Meio de pagamento</p>
+        <h2>Cartão de crédito</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-text>
+      <p>Se precisar de alguma assistência, não hesite em entrar em contato com a nossa equipe de suporte. Obrigado por
+        escolher nossa plataforma e tenha um excelente dia!</p>
+    </ion-text>
+  </div>
+  <ion-button type="submit" expand="full" color="primary" routerLink="/">Fechar</ion-button>
+</ion-content>
