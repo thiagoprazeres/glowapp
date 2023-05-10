@@ -25,9 +25,6 @@ export class AgendarPage implements OnInit {
     });
   }
 
-  confirmar() {
-    console.log(this.agendamentoForm.value);
-  }
   isSunday = (dateString: string) => {
     const date = new Date(dateString);
     const utcDay = date.getUTCDay();

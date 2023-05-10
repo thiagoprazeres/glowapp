@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'agendar',
     loadChildren: () => import('./pages/agendar/agendar.module').then( m => m.AgendarPageModule)
   },
+  {
+    path: 'pagamento',
+    loadChildren: () => import('./pages/pagamento/pagamento.module').then( m => m.PagamentoPageModule)
+  },
 ];
 
 @NgModule({
