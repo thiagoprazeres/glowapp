@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import * as moment from 'moment-timezone';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 @Component({
   selector: 'app-agendar',
@@ -15,7 +17,7 @@ export class AgendarPage implements OnInit {
     hora: ""
   });
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private pedido: PedidoService) {
   }
 
   ngOnInit() {
@@ -35,5 +37,12 @@ export class AgendarPage implements OnInit {
      */
     return utcDay !== 0;
   };
+
+  agendar() {
+    const agendamento = this.agendamentoForm.value;
+    this.pedido.setData(agendamento.data!);
+    this.pedido.setHora(agendamento.hora!);
+    this.router.navigate(['pagamento']);
+  }
 
 }

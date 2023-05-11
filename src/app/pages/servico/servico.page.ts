@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Servicos } from 'src/app/interfaces/servicos';
+import { PedidoService } from 'src/app/services/pedido.service';
 import { SERVICOS } from 'src/servicos';
 
 @Component({
@@ -13,11 +14,12 @@ export class ServicoPage implements OnInit {
   servicos = SERVICOS;
   servico: Servicos | undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private pedido: PedidoService) { }
 
   ngOnInit() {
     this.titulo = this.route.snapshot.paramMap.get('titulo');
     this.servico = SERVICOS.find(h => h.nome === this.titulo)!;
+    this.pedido.setItem(this.servico.nome);
   }
 
 }
