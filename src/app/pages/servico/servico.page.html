@@ -8,8 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div
-    [style]="'height: 33%; width: 100%;background-image: url('+servico?.imagem+');background-size: cover;'">
+  <div [style]="'height: 33%; width: 100%;background-image: url('+servico?.imagem+');background-size: cover;'">
   </div>
   <div class="ion-padding">
     <h1>{{servico?.nome}}</h1>
@@ -22,7 +21,8 @@
     </ion-text>
   </div>
 </ion-content>
-<ion-footer class="ion-no-padding">
-  <ion-toolbar color="primary"><ion-button expand="full" fill="clear" color="light"
-      routerLink="/endereco">Agendar</ion-button></ion-toolbar>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-padding">
+    <ion-button color="primary" expand="block" shape="round" color="primary" routerLink="/endereco">Agendar</ion-button>
+  </ion-toolbar>
 </ion-footer>
