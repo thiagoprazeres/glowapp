@@ -44,10 +44,10 @@ export const SERVICOS: Servicos[] = [
     "preco": 80
   },
   {
-    "nome": "Depil",
+    "nome": "Depilação a Laser",
     "imagem": "assets/photos/pexels-tima-miroshnichenko-6763618.jpg",
     "avatar": "assets/photos/pexels-tima-miroshnichenko-6763618.min.jpg",
-    "descricao": "Quer ter uma pele lisinha e suave sem se preocupar com pelos indesejados? Então, experimente nosso serviço de depilação! Nossos profissionais são especializados em técnicas de depilação eficientes e seguras, para garantir que você se sinta confortável durante todo o processo. Oferecemos serviços completos de depilação para todas as áreas do corpo, utilizando produtos de alta qualidade que não agridem a pele. Além disso, utilizamos métodos de depilação que proporcionam uma sensação de bem-estar e alívio, como a depilação com cera quente ou fria, ou com laser. Agende agora mesmo o seu horário e sinta a diferença em sua pele! Com o nosso serviço de depilação, você pode se sentir confiante e à vontade em qualquer situação, sem se preocupar com pelos indesejados.",
-    "preco": 12000
+    "descricao": "A depilação a laser é um serviço de remoção de pelos que utiliza tecnologia de ponta para proporcionar resultados duradouros e eficientes. Ao optar pela depilação a laser, você pode se livrar dos pelos indesejados de forma mais rápida, segura e eficaz do que com outros métodos tradicionais, como a depilação com cera ou lâminas. Com a depilação a laser, você pode ter uma pele lisinha por semanas ou até meses, sem se preocupar com pelos encravados ou irritações na pele. Além disso, a depilação a laser é uma opção mais econômica e sustentável a longo prazo, pois reduz a necessidade de comprar produtos e equipamentos para depilação regularmente. Agende já uma sessão e experimente você mesmo os benefícios da depilação a laser!",
+    "preco": 400
   }
 ]

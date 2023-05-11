@@ -41,3 +41,29 @@ ion-datetime {
     src: url("assets/fonts/Suarez-Alt.otf") format("opentype");
     font-display: swap;
 }
+
+/*
+ * RESPOSIVIDADE
+*/
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+.container {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
