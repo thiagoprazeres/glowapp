@@ -31,7 +31,8 @@
                 "output": "./svg"
               },
               "src/manifest.webmanifest",
-              "src/_redirects"
+              "src/_redirects",
+              "src/summary.html"
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
             "scripts": [],
